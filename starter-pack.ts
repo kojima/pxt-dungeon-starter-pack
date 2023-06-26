@@ -1,3 +1,7 @@
+namespace SpriteKind {
+    export const Sword = SpriteKind.create()
+}
+
 enum ActionKind {
     Walking,
     Idle,
