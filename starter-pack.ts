@@ -132,10 +132,10 @@ namespace dungeon_starter_pack {
         if (sb && !sprites.readDataBoolean(sprite, "damaging")) {
             sb.value -= damage
             sprites.setDataBoolean(sprite, "damaging", true)
-            timer.after(2000, () => {
+            control.setInterval(() => {
                 sprites.setDataBoolean(sprite, "damaging", false)
                 sprite.setFlag(SpriteFlag.Invisible, false)
-            })
+            }, 2000, control.IntervalMode.Timeout)
         }
     }
 
